@@ -16,3 +16,9 @@ def digital_root(n):
 
         return root[-1]
     return n
+
+
+#I literally spent hours on that (i am still learning, yeah...) and then i saw the solution in one line, was like FML...
+
+def digital_root(n):
+    return n % 9 or (n and 9)
