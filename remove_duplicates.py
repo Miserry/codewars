@@ -23,4 +23,6 @@ for num in nums[1:]:
 
 print(k+1, nums)
 
+Output = 5  [0, 1, 2, 3, 4, 0, 1, 1, 2, 3]
+
 #Have to admit that i have struggled quite a bit solving this without using another list to store the values.
