@@ -31,7 +31,8 @@ class Solution:
         end_result = []
         stack = []
 
-        while root or stack:
+        while root or stack:     #while root is not null or stack is not empty: do stuff
+                                 #so outer while will stop only when both root and stack return False - this means the root is null and your stack is []
             while root:
                 stack.append(root)           #left is not None, so we append.
                 root = root.left             #Looking left again, if it is not None while root will iterate, until it is None.
@@ -40,3 +41,5 @@ class Solution:
             root = root.right                #Then look right, as left is None.
 
         return end_result
+    
+    
