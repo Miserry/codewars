@@ -8,21 +8,18 @@
 
 #Return k after placing the final result in the first k slots of nums.
 
+def removeDuplicates(nums: List[int]) -> int:
+    """
+    k = 1
+    Start a for (i) loop to mark the current number, 
+        if i no in nums[:k], k += 1
+        else, nums.append(nums.pop(k))
+    """
+    k = 1
+    for i in nums[1:]:
+        if i not in nums[:k]:
+            k += 1
+        else:
+            nums.append(nums.pop(k))
+    return k
 
-
-
-nums = [0,0,1,1,1,2,2,3,3,4]
-
-k = 0
-
-for num in nums[1:]:
-    if num == nums[k]:
-        nums += [nums.pop(k)]   #I didn't know that we can pop a random index position,
-    else:                       #but adding the popped index value to the end of the list makes absolute sense in our case.
-        k += 1
-
-print(k+1, nums)
-
-Output = 5  [0, 1, 2, 3, 4, 0, 1, 1, 2, 3]
-
-#Have to admit that i have struggled quite a bit solving this without using another list to store the values.
